@@ -6,15 +6,20 @@ import numpy as np
 from redis.commands.search.query import Query
 import os
 import fitz
+import re
+import string
+from nltk.corpus import stopwords
+import nltk
 
 # Initialize Redis connection
-redis_client = redis.Redis(host="localhost", port=6380, db=0)
+redis_client = redis.Redis(host="localhost", port=6379, db=0)
 
 VECTOR_DIM = 768
 INDEX_NAME = "embedding_index"
 DOC_PREFIX = "doc:"
 DISTANCE_METRIC = "COSINE"
-
+nltk.download("stopwords")
+STOPWORDS = set(stopwords.words("english"))
 
 # used to clear the redis vector store
 def clear_redis_store():
@@ -22,6 +27,14 @@ def clear_redis_store():
     redis_client.flushdb()
     print("Redis store cleared.")
 
+
+def clean_text(text):
+    """Clean text by removing extra whitespace, punctuation, and stopwords."""
+    text = text.lower()  # Convert to lowercase
+    text = re.sub(r"\s+", " ", text)  # Remove extra whitespaces
+    text = text.translate(str.maketrans("", "", string.punctuation))  # Remove punctuation
+    text = " ".join(word for word in text.split() if word not in STOPWORDS)  # Remove stopwords
+    return text
 
 # Create an HNSW index in Redis
 def create_hnsw_index():
@@ -70,7 +83,10 @@ def extract_text_from_pdf(pdf_path):
     doc = fitz.open(pdf_path)
     text_by_page = []
     for page_num, page in enumerate(doc):
-        text_by_page.append((page_num, page.get_text()))
+        raw_text = page.get_text()
+        cleaned_text = clean_text(raw_text)
+        text_by_page.append((page_num, cleaned_text))
+
     return text_by_page
 
 
@@ -130,10 +146,9 @@ def main():
     clear_redis_store()
     create_hnsw_index()
 
-    process_pdfs("../data/")
+    process_pdfs("../data/raw_data")
     print("\n---Done processing PDFs---\n")
     query_redis("What is the capital of France?")
-
 
 if __name__ == "__main__":
     main()
