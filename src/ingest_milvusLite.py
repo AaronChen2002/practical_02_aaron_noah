@@ -9,6 +9,7 @@ import argparse
 from sentence_transformers import SentenceTransformer
 from InstructorEmbedding import INSTRUCTOR
 import ollama
+import uuid
 
 # Download NLTK stopwords if not already present
 try:
@@ -90,16 +91,20 @@ def get_embedding(text: str, model_name: str, model_instance=None) -> list:
 
 def store_embedding(client, file: str, page: str, chunk: str, embedding: list, chunk_text: str):
     """Store document chunk and its embedding in MilvusLite"""
-
-    embedding_vector = np.array(embedding, dtype=np.float32)
-
+    # Convert the embedding to numpy float32 array
+    embedding_array = np.array(embedding, dtype=np.float32)
+    # Generate a unique ID using UUID4
+    unique_id = uuid.uuid4().int & ((1 << 63) - 1)  # Convert UUID to 63-bit integer
+    
     data = {
-        # "file": [file],
-        # "page": [page],
-        # "chunk": [chunk],
-        # "text": [chunk_text],
-        "embedding": [embedding_vector]
+        "id": unique_id,
+        "file": file,
+        "page": page,
+        "chunk": chunk,
+        "text": chunk_text,
+        "embedding": embedding_array
     }
+    
     client.insert(
         collection_name=COLLECTION_NAME,
         data=data
@@ -141,11 +146,13 @@ def query_milvus(client, query_text: str, model: str, model_instance):
 
     print(f"\nQuery results using model: {model}")
     for hit in results[0]:
-        print(f"\nSimilarity Score: {1 - hit.distance:.4f}")
-        print(f"File: {hit.entity.get('file')}")
-        print(f"Page: {hit.entity.get('page')}")
-        print(f"Text: {hit.entity.get('text')}")
+        print(f"\nSimilarity Score: {1 - hit['distance']:.4f}")
+        print(f"File: {hit['entity'].get('file')}")
+        print(f"Page: {hit['entity'].get('page')}")
+        print(f"Text: {hit['entity'].get('text')}")
         print("-" * 50)
+
+
 
 def main():
     parser = argparse.ArgumentParser(description="Process PDFs and store embeddings in MilvusLite")
