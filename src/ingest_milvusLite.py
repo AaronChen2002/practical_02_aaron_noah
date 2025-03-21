@@ -8,6 +8,7 @@ import nltk
 import argparse
 from sentence_transformers import SentenceTransformer
 from InstructorEmbedding import INSTRUCTOR
+import ollama
 
 # Download NLTK stopwords if not already present
 try:
@@ -16,7 +17,7 @@ except LookupError:
     nltk.download("stopwords")
     STOPWORDS = set(stopwords.words("english"))
 
-VECTOR_DIM = 768  # Dimension for INSTRUCTOR embeddings; update if using a different model
+VECTOR_DIM = 768  # This works for both nomic-embed-text and all-MiniLM-L6-v2
 COLLECTION_NAME = "document_store"
 
 def init_milvus_lite():
@@ -79,23 +80,31 @@ def split_text_into_chunks(text: str, chunk_size: int = 500, overlap: int = 50) 
             chunks.append(chunk)
     return chunks
 
-def get_embedding(text: str, model_instance) -> list:
+def get_embedding(text: str, model_name: str, model_instance=None) -> list:
     """Generate embedding for text using specified model"""
-    embedding = model_instance.encode(text)
-    # Convert embedding to a list of float32 to match the expected float_vector type
-    embedding = np.array(embedding, dtype=np.float32).tolist()
-    return embedding
+    if model_name == "nomic-embed-text":
+        response = ollama.embeddings(model=model_name, prompt=text)
+        return response["embedding"]
+    elif model_name == "all-MiniLM-L6-v2":
+        return model_instance.encode(text).tolist()
 
-def store_embedding(client, embedding: list):
+def store_embedding(client, file: str, page: str, chunk: str, embedding: list, chunk_text: str):
+    """Store document chunk and its embedding in MilvusLite"""
+
+    embedding_vector = np.array(embedding, dtype=np.float32)
+
     data = {
-        "embedding": [embedding]  # One record’s vector
+        # "file": [file],
+        # "page": [page],
+        # "chunk": [chunk],
+        # "text": [chunk_text],
+        "embedding": [embedding_vector]
     }
     client.insert(
         collection_name=COLLECTION_NAME,
         data=data
     )
-    print("Stored embedding")
-
+    print(f"Stored embedding → file: {file} | page: {page} | chunk: {chunk} | text: {chunk_text[:100]}...")
 
 def process_pdfs(client, data_dir: str, model: str, chunk_size: int, overlap: int, model_instance):
     """Process all PDFs in directory and store embeddings"""
@@ -108,16 +117,20 @@ def process_pdfs(client, data_dir: str, model: str, chunk_size: int, overlap: in
             for page_num, text in text_by_page:
                 chunks = split_text_into_chunks(text, chunk_size=chunk_size, overlap=overlap)
                 for chunk_index, chunk in enumerate(chunks):
-                    embedding = get_embedding(chunk, model_instance=model_instance)
+                    embedding = get_embedding(chunk, model_name=model, model_instance=model_instance)
                     store_embedding(
                         client=client,
+                        file=file_name,
+                        page=str(page_num),
+                        chunk=str(chunk_index),
                         embedding=embedding,
+                        chunk_text=chunk
                     )
             print(f"Completed processing {file_name}")
 
 def query_milvus(client, query_text: str, model: str, model_instance):
     """Search for similar documents using query text"""
-    query_embedding = get_embedding(query_text, model_instance=model_instance)
+    query_embedding = get_embedding(query_text, model_name=model, model_instance=model_instance)
     
     results = client.search(
         collection_name=COLLECTION_NAME,
@@ -136,10 +149,10 @@ def query_milvus(client, query_text: str, model: str, model_instance):
 
 def main():
     parser = argparse.ArgumentParser(description="Process PDFs and store embeddings in MilvusLite")
-    parser.add_argument("--model", type=str, default="instructor",
-                      choices=["instructor", "sentence-transformer"],
+    parser.add_argument("--model", type=str, default="nomic-embed-text",
+                      choices=["nomic-embed-text", "all-MiniLM-L6-v2"],
                       help="Model to use for embeddings")
-    parser.add_argument("--chunk-size", type=int, default=500,
+    parser.add_argument("--chunk-size", type=int, default=300,
                       help="Size of text chunks")
     parser.add_argument("--overlap", type=int, default=50,
                       help="Overlap between chunks")
@@ -149,14 +162,10 @@ def main():
     args = parser.parse_args()
 
     # Initialize the embedding model
-    if args.model == "instructor":
-        model_instance = INSTRUCTOR('hkunlp/instructor-xl')
-    elif args.model == "sentence-transformer":
-        model_instance = SentenceTransformer('all-MiniLM-L6-v2')
-        # NOTE: The sentence-transformer model outputs embeddings of dimension 384.
-        # Update VECTOR_DIM accordingly in that case.
-    else:
-        raise ValueError(f"Unknown model type: {args.model}")
+    if args.model == "nomic-embed-text":
+        model_instance = None
+    else:  # all-MiniLM-L6-v2
+        model_instance = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
     # Initialize MilvusLite client
     client_ = init_milvus_lite()
