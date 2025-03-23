@@ -16,7 +16,7 @@ stored in Redis-stack
 - `src/search_redis.py` - simple question answering using the LLM
 - `src/preprocess_text.py` - Extracts and cleans text from pdf documents in `raw_data` folder and creates corresponding txt files in the `cleaned_data` folder
 
-- src/chroma_ingest.py: Ingests and processes PDF files from the ./data/raw_data folder. Generates embeddings using a specified model and stores them in ChromaDB.
-- src/chroma_search.py: Provides an interactive interface for querying the RAG system. Retrieves relevant context from ChromaDB and generates responses using a locally-running LLM.
-- src/milvus_ingest.py: Ingests and processes PDF files from the ./data/raw_data folder. Generates embeddings using a specified model and stores them in MilvusLite.
-- src/milvus_search.py: Provides an interactive interface for querying the RAG system. Retrieves relevant context from MilvusLite and generates responses using a locally-running LLM.
+- `src/chroma_ingest.py`: Ingests and processes PDF files from the ./data/raw_data folder. Generates embeddings using a specified model and stores them in ChromaDB.
+- `src/chroma_search.py`: Provides an interactive interface for querying the RAG system. Retrieves relevant context from ChromaDB and generates responses using a locally-running LLM.
+- `src/ingest_milvusLite.py`: Ingests and processes PDF files from the ./data/raw_data folder. Generates embeddings using a specified model and stores them in MilvusLite.
+- `src/search_milvusLIte.py`: Provides an interactive interface for querying the RAG system. Retrieves relevant context from MilvusLite and generates responses using a locally-running LLM.
