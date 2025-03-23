@@ -8,7 +8,7 @@
 Docker, change the port number in the creation of the Redis client in both python files in `src`.
 
 ## Source Code
-- `src/ingest.py` - imports and processes PDF files in `./data` folder. Embeddings and associated information 
+- `src/ingest_redis.py` - imports and processes PDF files in `./data` folder. Embeddings and associated information 
 stored in Redis-stack
-- `src/search.py` - simple question answering using the LLM
+- `src/search_redis.py` - simple question answering using the LLM
 - `src/preprocess_text.py` - Extracts and cleans text from pdf documents in `raw_data` folder and creates corresponding txt files in the `cleaned_data` folder
