@@ -33,3 +33,19 @@ Configuration Options
   - Redis: High performance and scalability. Requires Docker.
   - Chroma: Easy to set up and use locally. No Docker required.
   - MilvusLite: Lightweight but less feature-rich.
+ 
+## Example Commands
+For Redis-based RAG:
+- python src/ingest_redis.py --chunk_size 500 --overlap 50 --model all-mpnet-base-v2
+- python src/search_redis.py
+
+For Chroma-based RAG: 
+- python src/chroma_ingest.py --model all-mpnet-base-v2 --chunk_size 500 --overlap 50
+- python src/chroma_search.py --model all-mpnet-base-v2
+
+For Milvus-based RAG: 
+- python src/milvus_ingest.py --model all-mpnet-base-v2 --chunk_size 500 --overlap 50
+- python src/milvus_search.py --model all-mpnet-base-v2
+
+
+
