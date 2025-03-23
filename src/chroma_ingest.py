@@ -82,7 +82,7 @@ def main():
                     )
                     print(f"Stored chunk: {chunk[:100]}...")
 
-    print("✅ Done ingesting into ChromaDB.")
+    print("Done ingesting into ChromaDB.")
 
 if __name__ == "__main__":
     main()
