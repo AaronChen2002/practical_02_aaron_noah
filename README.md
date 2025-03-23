@@ -15,3 +15,21 @@ docker run -d --name redis-stack -p 6379:6379 redis/redis-stack:latest
 stored in Redis-stack
 - `src/search.py` - simple question answering using the LLM
 - `src/preprocess_text.py` - Extracts and cleans text from pdf documents in `raw_data` folder and creates corresponding txt files in the `cleaned_data` folder
+
+## How to Execute
+
+Configuration Options
+- Embedding Models
+  - nomic-embed-text: Lightweight and fast, but less accurate.
+  - all-MiniLM-L6-v2: Balanced speed and accuracy (384 dimensions).
+  - all-mpnet-base-v2: High accuracy but slower (768 dimensions).
+
+- Chunking Strategies
+  - Chunk Size: Controls the size of text chunks (e.g., 200, 500, 1000 tokens).
+
+- Overlap: Ensures continuity between chunks (e.g., 0, 50, 100 tokens).
+
+- Vector Databases
+  - Redis: High performance and scalability. Requires Docker.
+  - Chroma: Easy to set up and use locally. No Docker required.
+  - MilvusLite: Lightweight but less feature-rich.
