@@ -1,0 +1,69 @@
+vector_db,embed_model,chunk_size,overlap,llm,query,response,ingest_time,query_time
+redis,nomic-embed-text,300,0,mistral,What is an AVL tree?,,25.51,0.35
+redis,nomic-embed-text,300,0,mistral,What is the CAP theorem?,,25.51,0.22
+redis,nomic-embed-text,300,0,mistral,How does Redis handle hash values?,,25.51,0.22
+redis,nomic-embed-text,300,0,mistral,Explain the purpose of Cypher in Neo4j.,,25.51,0.23
+redis,nomic-embed-text,300,0,llama2,What is an AVL tree?,,17.48,0.47
+redis,nomic-embed-text,300,0,llama2,What is the CAP theorem?,,17.48,0.22
+redis,nomic-embed-text,300,0,llama2,How does Redis handle hash values?,,17.48,0.23
+redis,nomic-embed-text,300,0,llama2,Explain the purpose of Cypher in Neo4j.,,17.48,0.24
+redis,nomic-embed-text,300,50,mistral,What is an AVL tree?,,18.04,0.34
+redis,nomic-embed-text,300,50,mistral,What is the CAP theorem?,,18.04,0.23
+redis,nomic-embed-text,300,50,mistral,How does Redis handle hash values?,,18.04,0.23
+redis,nomic-embed-text,300,50,mistral,Explain the purpose of Cypher in Neo4j.,,18.04,0.25
+redis,nomic-embed-text,300,50,llama2,What is an AVL tree?,,16.79,0.45
+redis,nomic-embed-text,300,50,llama2,What is the CAP theorem?,,16.79,0.23
+redis,nomic-embed-text,300,50,llama2,How does Redis handle hash values?,,16.79,0.27
+redis,nomic-embed-text,300,50,llama2,Explain the purpose of Cypher in Neo4j.,,16.79,0.23
+redis,nomic-embed-text,500,0,mistral,What is an AVL tree?,,17.19,0.45
+redis,nomic-embed-text,500,0,mistral,What is the CAP theorem?,,17.19,0.22
+redis,nomic-embed-text,500,0,mistral,How does Redis handle hash values?,,17.19,0.23
+redis,nomic-embed-text,500,0,mistral,Explain the purpose of Cypher in Neo4j.,,17.19,0.22
+redis,nomic-embed-text,500,0,llama2,What is an AVL tree?,,17.44,0.35
+redis,nomic-embed-text,500,0,llama2,What is the CAP theorem?,,17.44,0.23
+redis,nomic-embed-text,500,0,llama2,How does Redis handle hash values?,,17.44,0.24
+redis,nomic-embed-text,500,0,llama2,Explain the purpose of Cypher in Neo4j.,,17.44,0.24
+chroma,all-MiniLM-L6-v2,300,0,llama2,Explain the purpose of Cypher in Neo4j.,,34.83,4.11
+chroma,all-MiniLM-L6-v2,300,50,mistral,What is an AVL tree?,,33.61,4.88
+chroma,all-MiniLM-L6-v2,300,50,mistral,What is the CAP theorem?,,33.61,3.07
+chroma,all-MiniLM-L6-v2,300,50,mistral,How does Redis handle hash values?,,33.61,3.15
+chroma,all-MiniLM-L6-v2,300,50,mistral,Explain the purpose of Cypher in Neo4j.,,33.61,3.08
+chroma,all-MiniLM-L6-v2,300,50,llama2,What is an AVL tree?,,33.61,3.09
+chroma,all-MiniLM-L6-v2,300,50,llama2,What is the CAP theorem?,,33.61,3.06
+chroma,all-MiniLM-L6-v2,300,50,llama2,How does Redis handle hash values?,,33.61,3.08
+chroma,all-MiniLM-L6-v2,300,50,llama2,Explain the purpose of Cypher in Neo4j.,,33.61,3.22
+chroma,all-MiniLM-L6-v2,500,0,mistral,What is an AVL tree?,,17.82,4.35
+chroma,all-MiniLM-L6-v2,500,0,mistral,What is the CAP theorem?,,17.82,2.96
+chroma,all-MiniLM-L6-v2,500,0,mistral,How does Redis handle hash values?,,17.82,3.02
+chroma,all-MiniLM-L6-v2,500,0,mistral,Explain the purpose of Cypher in Neo4j.,,17.82,3.03
+chroma,all-MiniLM-L6-v2,500,0,llama2,What is an AVL tree?,,17.82,2.95
+chroma,all-MiniLM-L6-v2,500,0,llama2,What is the CAP theorem?,,17.82,3.02
+chroma,all-MiniLM-L6-v2,500,0,llama2,How does Redis handle hash values?,,17.82,3.12
+chroma,all-MiniLM-L6-v2,500,0,llama2,Explain the purpose of Cypher in Neo4j.,,17.82,3.35
+chroma,all-MiniLM-L6-v2,500,50,mistral,What is an AVL tree?,,21.62,5.85
+chroma,all-MiniLM-L6-v2,500,50,mistral,What is the CAP theorem?,,21.62,4.07
+chroma,all-MiniLM-L6-v2,500,50,mistral,How does Redis handle hash values?,,21.62,4.44
+chroma,all-MiniLM-L6-v2,500,50,mistral,Explain the purpose of Cypher in Neo4j.,,21.62,5.07
+chroma,all-MiniLM-L6-v2,500,50,llama2,What is an AVL tree?,,21.62,4.23
+chroma,all-MiniLM-L6-v2,300,0,mistral,What is an AVL tree?,,21.02,4.74
+chroma,all-MiniLM-L6-v2,300,0,mistral,What is the CAP theorem?,,21.02,3.23
+chroma,all-MiniLM-L6-v2,300,0,mistral,How does Redis handle hash values?,,21.02,3.25
+chroma,all-MiniLM-L6-v2,300,0,mistral,Explain the purpose of Cypher in Neo4j.,,21.02,3.13
+chroma,all-MiniLM-L6-v2,300,0,llama2,What is an AVL tree?,,21.02,3.28
+chroma,all-MiniLM-L6-v2,300,0,llama2,What is the CAP theorem?,,21.02,3.28
+chroma,all-MiniLM-L6-v2,300,0,llama2,How does Redis handle hash values?,,21.02,3.14
+chroma,all-MiniLM-L6-v2,300,0,llama2,Explain the purpose of Cypher in Neo4j.,,21.02,3.31
+chroma,all-MiniLM-L6-v2,300,50,mistral,What is an AVL tree?,,18.54,4.33
+chroma,all-MiniLM-L6-v2,300,50,mistral,What is the CAP theorem?,,18.54,3.15
+chroma,all-MiniLM-L6-v2,300,50,mistral,How does Redis handle hash values?,,18.54,3.21
+chroma,all-MiniLM-L6-v2,300,50,mistral,Explain the purpose of Cypher in Neo4j.,,18.54,3.15
+chroma,all-MiniLM-L6-v2,300,50,llama2,What is an AVL tree?,,18.54,3.61
+chroma,all-MiniLM-L6-v2,300,50,llama2,What is the CAP theorem?,,18.54,3.35
+chroma,all-MiniLM-L6-v2,300,50,llama2,How does Redis handle hash values?,,18.54,3.87
+chroma,all-MiniLM-L6-v2,300,50,llama2,Explain the purpose of Cypher in Neo4j.,,18.54,3.07
+chroma,all-MiniLM-L6-v2,500,0,mistral,What is an AVL tree?,,33.02,7.18
+chroma,all-MiniLM-L6-v2,500,0,mistral,What is the CAP theorem?,,33.02,4.15
+chroma,all-MiniLM-L6-v2,500,0,mistral,How does Redis handle hash values?,,33.02,4.52
+chroma,all-MiniLM-L6-v2,500,0,mistral,Explain the purpose of Cypher in Neo4j.,,33.02,5.16
+chroma,all-MiniLM-L6-v2,500,0,llama2,What is an AVL tree?,,33.02,4.47
+chroma,all-MiniLM-L6-v2,500,0,llama2,What is the CAP theorem?,,33.02,4.73
