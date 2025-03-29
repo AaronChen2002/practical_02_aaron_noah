@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="ds3500" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="ds3500" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="ds4300" project-jdk-type="Python SDK" />
 </project>
