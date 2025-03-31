@@ -12,10 +12,14 @@ LLMS = ["mistral", "llama2"]  # Used during prompting
 
 # List of test questions to evaluate
 TEST_QUERIES = [
-    "What is an AVL tree?",
+    "What is the difference between an AVL tree and a B+ tree?",
+    "How do you perform an insertion in a B+ tree?",
+    "How do you perform an insertion in an AVL tree?"
     "What is the CAP theorem?",
     "How does Redis handle hash values?",
-    "Explain the purpose of Cypher in Neo4j."
+    "Explain the purpose of Cypher in Neo4j.",
+    "How do you write Redis queries?"
+    "What are the advantages and weaknesses of AVL trees compared to hash tables?"
 ]
 
 # Where results will be saved
@@ -63,7 +67,7 @@ for vector_db in VECTOR_DBS:
 
                     for llm in LLMS:
                         for query in TEST_QUERIES:
-                            print(f"\n[⚙️ RUNNING] DB={vector_db}, Model={model}, LLM={llm}, Chunk={chunk_size}, Overlap={overlap}")
+                            print(f"\n[RUNNING] DB={vector_db}, Model={model}, LLM={llm}, Chunk={chunk_size}, Overlap={overlap}")
                             print(f"🔍 Query: {query}")
                             start_query = time.time()
                             response = run_search(vector_db, query, model, llm)
@@ -81,4 +85,4 @@ for vector_db in VECTOR_DBS:
                                 "query_time": round(query_time, 2),
                             })
                 except subprocess.CalledProcessError as e:
-                    print(f"❌ Error during processing: {e}")
+                    print(f"Error during processing: {e}")
