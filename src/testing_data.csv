@@ -1,0 +1,133 @@
+vector_db,embed_model,chunk_size,overlap,llm,query,response,ingest_time,query_time
+Milvus,nomic-embed-text,30,0,mistral,What is the difference between an AVL tree and a B+ tree?,,28.45,2.89
+Milvus,all-minilm-l6-v2,30,0,mistral,How do you perform an insertion in a B+ tree?,,31.12,3.11
+Milvus,all-mpnet-base-v2,30,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,33.76,3.45
+Milvus,nomic-embed-text,30,0,mistral,How does Redis handle hash values?,,27.89,2.76
+Milvus,all-minilm-l6-v2,30,0,mistral,Explain the purpose of Cypher in Neo4j.,,35.54,3.25
+Milvus,all-mpnet-base-v2,30,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,29.23,3.56
+Milvus,nomic-embed-text,30,0,mistral,What is the difference between an AVL tree and a B+ tree?,,30.77,2.94
+Milvus,all-minilm-l6-v2,30,0,mistral,How do you perform an insertion in a B+ tree?,,32.89,3.02
+Milvus,all-mpnet-base-v2,30,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,34.12,3.38
+Milvus,nomic-embed-text,30,0,mistral,How does Redis handle hash values?,,26.45,2.71
+Milvus,all-minilm-l6-v2,30,0,mistral,Explain the purpose of Cypher in Neo4j.,,36.67,3.41
+Milvus,all-mpnet-base-v2,30,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,28.78,3.49
+Milvus,nomic-embed-text,30,50,llama2,What is the difference between an AVL tree and a B+ tree?,,32.34,3.12
+Milvus,all-minilm-l6-v2,30,50,llama2,How do you perform an insertion in a B+ tree?,,34.12,3.45
+Milvus,all-mpnet-base-v2,30,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,36.65,3.76
+Milvus,nomic-embed-text,30,50,llama2,How does Redis handle hash values?,,30.21,2.89
+Milvus,all-minilm-l6-v2,30,50,llama2,Explain the purpose of Cypher in Neo4j.,,38.76,3.54
+Milvus,all-mpnet-base-v2,30,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,31.92,3.65
+Milvus,nomic-embed-text,30,50,llama2,What is the difference between an AVL tree and a B+ tree?,,33.65,3.21
+Milvus,all-minilm-l6-v2,30,50,llama2,How do you perform an insertion in a B+ tree?,,35.43,3.41
+Milvus,all-mpnet-base-v2,30,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,37.21,3.59
+Milvus,nomic-embed-text,30,50,llama2,How does Redis handle hash values?,,31.54,2.98
+Milvus,all-minilm-l6-v2,30,50,llama2,Explain the purpose of Cypher in Neo4j.,,39.34,3.67
+Milvus,all-mpnet-base-v2,30,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,32.87,3.76
+Milvus,nomic-embed-text,50,0,mistral,What is the difference between an AVL tree and a B+ tree?,,31.87,3.08
+Milvus,all-minilm-l6-v2,50,0,mistral,How do you perform an insertion in a B+ tree?,,34.09,3.45
+Milvus,all-mpnet-base-v2,50,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,36.12,3.71
+Milvus,nomic-embed-text,50,0,mistral,How does Redis handle hash values?,,29.65,2.91
+Milvus,all-minilm-l6-v2,50,0,mistral,Explain the purpose of Cypher in Neo4j.,,38.21,3.52
+Milvus,all-mpnet-base-v2,50,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,30.76,3.49
+Milvus,nomic-embed-text,50,0,mistral,What is the difference between an AVL tree and a B+ tree?,,32.89,3.14
+Milvus,all-minilm-l6-v2,50,0,mistral,How do you perform an insertion in a B+ tree?,,35.23,3.48
+Milvus,all-mpnet-base-v2,50,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,37.32,3.61
+Milvus,nomic-embed-text,50,0,mistral,How does Redis handle hash values?,,30.54,2.86
+Milvus,all-minilm-l6-v2,50,0,mistral,Explain the purpose of Cypher in Neo4j.,,39.11,3.67
+Milvus,all-mpnet-base-v2,50,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,31.98,3.72
+Milvus,nomic-embed-text,50,50,llama2,What is the difference between an AVL tree and a B+ tree?,,33.77,3.26
+Milvus,all-minilm-l6-v2,50,50,llama2,How do you perform an insertion in a B+ tree?,,36.12,3.51
+Milvus,all-mpnet-base-v2,50,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,38.65,3.84
+Milvus,nomic-embed-text,50,50,llama2,How does Redis handle hash values?,,31.98,3.02
+Milvus,all-minilm-l6-v2,50,50,llama2,Explain the purpose of Cypher in Neo4j.,,40.34,3.72
+Milvus,all-mpnet-base-v2,50,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,33.12,3.78
+Redis,nomic-embed-text,30,0,mistral,What is the difference between an AVL tree and a B+ tree?,,37.12,3.45
+Redis,all-minilm-l6-v2,30,0,mistral,How do you perform an insertion in a B+ tree?,,40.98,3.82
+Redis,all-mpnet-base-v2,30,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,42.75,4.12
+Redis,nomic-embed-text,30,0,mistral,How does Redis handle hash values?,,35.87,2.98
+Redis,all-minilm-l6-v2,30,0,mistral,Explain the purpose of Cypher in Neo4j.,,45.23,3.67
+Redis,all-mpnet-base-v2,30,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,38.14,4.01
+Redis,nomic-embed-text,30,0,mistral,What is the difference between an AVL tree and a B+ tree?,,39.45,3.21
+Redis,all-minilm-l6-v2,30,0,mistral,How do you perform an insertion in a B+ tree?,,41.76,3.67
+Redis,all-mpnet-base-v2,30,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,43.32,3.92
+Redis,nomic-embed-text,30,0,mistral,How does Redis handle hash values?,,36.11,3.05
+Redis,all-minilm-l6-v2,30,0,mistral,Explain the purpose of Cypher in Neo4j.,,46.12,3.78
+Redis,all-mpnet-base-v2,30,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,37.65,3.98
+Redis,nomic-embed-text,30,50,llama2,What is the difference between an AVL tree and a B+ tree?,,40.23,4.12
+Redis,all-minilm-l6-v2,30,50,llama2,How do you perform an insertion in a B+ tree?,,42.89,3.56
+Redis,all-mpnet-base-v2,30,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,44.15,3.87
+Redis,nomic-embed-text,30,50,llama2,How does Redis handle hash values?,,34.87,2.95
+Redis,all-minilm-l6-v2,30,50,llama2,Explain the purpose of Cypher in Neo4j.,,45.78,3.55
+Redis,all-mpnet-base-v2,30,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,38.05,3.89
+Redis,nomic-embed-text,30,50,llama2,What is the difference between an AVL tree and a B+ tree?,,39.77,3.23
+Redis,all-minilm-l6-v2,30,50,llama2,How do you perform an insertion in a B+ tree?,,41.45,3.62
+Redis,all-mpnet-base-v2,30,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,42.98,3.74
+Redis,nomic-embed-text,30,50,llama2,How does Redis handle hash values?,,35.23,2.78
+Redis,all-minilm-l6-v2,30,50,llama2,Explain the purpose of Cypher in Neo4j.,,46.65,3.43
+Redis,all-mpnet-base-v2,30,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,37.32,3.77
+Redis,nomic-embed-text,50,0,mistral,What is the difference between an AVL tree and a B+ tree?,,39.12,3.11
+Redis,all-minilm-l6-v2,50,0,mistral,How do you perform an insertion in a B+ tree?,,42.31,3.87
+Redis,all-mpnet-base-v2,50,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,43.67,3.68
+Redis,nomic-embed-text,50,0,mistral,How does Redis handle hash values?,,34.76,2.89
+Redis,all-minilm-l6-v2,50,0,mistral,Explain the purpose of Cypher in Neo4j.,,45.91,3.75
+Redis,all-mpnet-base-v2,50,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,36.99,3.62
+Redis,nomic-embed-text,50,0,mistral,What is the difference between an AVL tree and a B+ tree?,,39.54,3.25
+Redis,all-minilm-l6-v2,50,0,mistral,How do you perform an insertion in a B+ tree?,,41.87,3.95
+Redis,all-mpnet-base-v2,50,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,42.34,3.48
+Redis,nomic-embed-text,50,0,mistral,How does Redis handle hash values?,,35.45,2.95
+Redis,all-minilm-l6-v2,50,0,mistral,Explain the purpose of Cypher in Neo4j.,,46.23,3.65
+Redis,all-mpnet-base-v2,50,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,37.19,3.71
+Redis,nomic-embed-text,50,50,llama2,What is the difference between an AVL tree and a B+ tree?,,39.88,3.29
+Redis,all-minilm-l6-v2,50,50,llama2,How do you perform an insertion in a B+ tree?,,41.65,3.76
+Redis,all-mpnet-base-v2,50,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,42.89,3.79
+Redis,nomic-embed-text,50,50,llama2,How does Redis handle hash values?,,35.62,2.99
+Redis,all-minilm-l6-v2,50,50,llama2,Explain the purpose of Cypher in Neo4j.,,45.77,3.84
+Redis,all-mpnet-base-v2,50,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,36.87,3.55
+chroma,all-minilm-l6-v2,300,0,mistral,What is the difference between an AVL tree and a B+ tree?,,45.61,8.97
+chroma,all-minilm-l6-v2,300,0,mistral,How do you perform an insertion in a B+ tree?,,45.61,3.55
+chroma,all-minilm-l6-v2,300,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,45.61,3.52
+chroma,all-minilm-l6-v2,300,0,mistral,How does Redis handle hash values?,,45.61,3.12
+chroma,all-minilm-l6-v2,300,0,mistral,Explain the purpose of Cypher in Neo4j.,,45.61,3.13
+chroma,all-minilm-l6-v2,300,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,45.61,3.12
+chroma,all-minilm-l6-v2,300,0,llama2,What is the difference between an AVL tree and a B+ tree?,,45.61,3.12
+chroma,all-minilm-l6-v2,300,0,llama2,How do you perform an insertion in a B+ tree?,,45.61,3.16
+chroma,all-minilm-l6-v2,300,0,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,45.61,3.2
+chroma,all-minilm-l6-v2,300,0,llama2,How does Redis handle hash values?,,45.61,3.22
+chroma,all-minilm-l6-v2,300,0,llama2,Explain the purpose of Cypher in Neo4j.,,45.61,3.15
+chroma,all-minilm-l6-v2,300,0,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,45.61,3.11
+chroma,all-minilm-l6-v2,300,50,mistral,What is the difference between an AVL tree and a B+ tree?,,85.27,5.74
+chroma,all-minilm-l6-v2,300,50,mistral,How do you perform an insertion in a B+ tree?,,85.27,3.9
+chroma,all-minilm-l6-v2,300,50,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,85.27,3.98
+chroma,all-minilm-l6-v2,300,50,mistral,How does Redis handle hash values?,,85.27,3.93
+chroma,all-minilm-l6-v2,300,50,mistral,Explain the purpose of Cypher in Neo4j.,,85.27,3.98
+chroma,all-minilm-l6-v2,300,50,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,85.27,4.01
+chroma,all-minilm-l6-v2,300,50,llama2,What is the difference between an AVL tree and a B+ tree?,,85.27,3.9
+chroma,all-minilm-l6-v2,300,50,llama2,How do you perform an insertion in a B+ tree?,,85.27,4.54
+chroma,all-minilm-l6-v2,300,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,85.27,3.64
+chroma,all-minilm-l6-v2,300,50,llama2,How does Redis handle hash values?,,85.27,3.11
+chroma,all-minilm-l6-v2,300,50,llama2,Explain the purpose of Cypher in Neo4j.,,85.27,2.97
+chroma,all-minilm-l6-v2,300,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,85.27,3.47
+chroma,all-minilm-l6-v2,500,0,mistral,What is the difference between an AVL tree and a B+ tree?,,23.77,4.64
+chroma,all-minilm-l6-v2,500,0,mistral,How do you perform an insertion in a B+ tree?,,23.77,3.1
+chroma,all-minilm-l6-v2,500,0,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,23.77,3.1
+chroma,all-minilm-l6-v2,500,0,mistral,How does Redis handle hash values?,,23.77,3.04
+chroma,all-minilm-l6-v2,500,0,mistral,Explain the purpose of Cypher in Neo4j.,,23.77,3.32
+chroma,all-minilm-l6-v2,500,0,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,23.77,3.18
+chroma,all-minilm-l6-v2,500,0,llama2,What is the difference between an AVL tree and a B+ tree?,,23.77,3.06
+chroma,all-minilm-l6-v2,500,0,llama2,How do you perform an insertion in a B+ tree?,,23.77,3.2
+chroma,all-minilm-l6-v2,500,0,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,23.77,3.19
+chroma,all-minilm-l6-v2,500,0,llama2,How does Redis handle hash values?,,23.77,3.37
+chroma,all-minilm-l6-v2,500,0,llama2,Explain the purpose of Cypher in Neo4j.,,23.77,3.17
+chroma,all-minilm-l6-v2,500,0,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,23.77,3.09
+chroma,all-minilm-l6-v2,500,50,mistral,What is the difference between an AVL tree and a B+ tree?,,18.66,4.36
+chroma,all-minilm-l6-v2,500,50,mistral,How do you perform an insertion in a B+ tree?,,18.66,3.9
+chroma,all-minilm-l6-v2,500,50,mistral,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,18.66,3.23
+chroma,all-minilm-l6-v2,500,50,mistral,o,,18.66,3.21
+chroma,all-minilm-l6-v2,500,50,mistral,Explain the purpose of Cypher in Neo4j.,,18.66,3.12
+chroma,all-minilm-l6-v2,500,50,mistral,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,18.66,3
+chroma,all-minilm-l6-v2,500,50,llama2,What is the difference between an AVL tree and a B+ tree?,,18.66,2.98
+chroma,all-minilm-l6-v2,500,50,llama2,How do you perform an insertion in a B+ tree?,,18.66,3.07
+chroma,all-minilm-l6-v2,500,50,llama2,How do you perform an insertion in an AVL tree?What is the CAP theorem?,,18.66,3.26
+chroma,all-minilm-l6-v2,500,50,llama2,How does Redis handle hash values?,,18.66,2.97
+chroma,all-minilm-l6-v2,500,50,llama2,Explain the purpose of Cypher in Neo4j.,,18.66,3.7
+chroma,all-minilm-l6-v2,500,50,llama2,How do you write Redis queries?What are the advantages and weaknesses of AVL trees compared to hash tables?,,18.66,3.28
