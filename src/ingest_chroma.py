@@ -44,7 +44,7 @@ def extract_text_from_pdf(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="all-MiniLM-L6-v2")
-    parser.add_argument("--chunk_size", type=int, default=300)
+    parser.add_argument("--chunk-size", type=int, default=300)
     parser.add_argument("--overlap", type=int, default=50)
     parser.add_argument("--data_dir", type=str, default="../data/raw_data")
     parser.add_argument("--persist_dir", type=str, default="./chroma_store")
